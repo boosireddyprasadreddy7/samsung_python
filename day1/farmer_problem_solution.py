@@ -26,3 +26,7 @@ sugarcane_sales = sugarcane_output * 4000
 # Total Sales 
 total_sales = tomato_sales + potato_sales + cabbage_sales + sugarcane_sales + sunflowers_output
 print("Total Sales :", total_sales)
+
+#chemical free sales
+chemical_free_sales = total_sales - sugarcane_sales
+print("Chemical free Sales: ", chemical_free_sales)
