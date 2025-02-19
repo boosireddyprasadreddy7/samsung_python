@@ -1,12 +1,15 @@
-#number_of_oranges = int(input("Enter the number of oranges: "))
-#list_of_oranges = list( map(int,input("Enter the list oranges size: ").split()))
-def quick_sort(list_of_oranges):
-    k = 0
-    for i in range(0, len(list_of_oranges)-1):
-        if list_of_oranges[i] <= list_of_oranges[-1] :
-            list_of_oranges[i], list_of_oranges[k] = list_of_oranges[k], list_of_oranges[i]
-            k += 1
+def partion_array(numbers, low, high):
+    j = low
+    pivot = numbers[high]
+    for i in range(low, high):
+        if numbers[i] < pivot:
+            numbers[i], numbers[j] = numbers[j], numbers[i] # move the smaller element to the left
+            j += 1
+    numbers[j], numbers[high] = numbers[high], numbers[j] # place the pivot element in its final position
+    return j
 
-    list_of_oranges[-1], list_of_oranges[k] = list_of_oranges[k], list_of_oranges[-1]
-    return list_of_oranges
-#print(list_of_oranges)
+def quick_sort(numbers, low, high):
+    if low < high:
+        pivot_index = partion_array(numbers, low, high)
+        quick_sort(numbers, low, pivot_index-1)
+        quick_sort(numbers, pivot_index+1, high)
