@@ -1,0 +1,5 @@
+show databases; - it list databases
+
+create database <name>; - this creates database
+
+select database();- this tells currently present database
