@@ -1,5 +1,5 @@
 import sys
-
+#Inserting at end and deleting at end
 
 class Stack:
     def __init__(self, size=5):
