@@ -48,5 +48,5 @@ def insert_row():
     cursor.execute(query, person)
     cursor.close()
     disconnect_db(connection)
-
-insert_row()
+string1 = "Quest Kerala"
+print(string1[5::-1])
