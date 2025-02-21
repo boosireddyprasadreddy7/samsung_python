@@ -1,6 +1,9 @@
 #inserting at front and deleting at end
 
 
+import sys
+
+
 class Queue:
     def __init__(self, size=5):
         self.que = []
@@ -11,7 +14,7 @@ class Queue:
             print("Queue is full")
         else:
             element = input("Enter the element to be inserted: ")
-            self.que.append(element)
+            self.que.insert(0, element)
     def delete_rear(self):
         if not self.que:
             print("Queue is empty")
@@ -19,8 +22,8 @@ class Queue:
             print(f"Popped element is {self.que.pop()}")
             
     def list_queue(self):
-        if len(self.que) == self.size:
-            print("Queue is full")
+        if not self.que:
+            print("Queue is empty")
         else :
             print("The Queue elements: ", self.que)
 

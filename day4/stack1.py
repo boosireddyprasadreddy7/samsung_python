@@ -1,4 +1,6 @@
 import sys
+#Inserting at end and deleting at front
+
 class Stack:
     def __init__(self, size=5):
         self.stk = []
@@ -8,7 +10,7 @@ class Stack:
         if len(self.stk) == self.size:
             print("Stack is full")
         else:
-            element = input("Enter the element to be pushed")
+            element = input("Enter the element to be pushed: ")
             self.stk.insert(0, element)
     def pop(self):
         if not self.stk:
@@ -17,22 +19,10 @@ class Stack:
             print(f"Popped element is {self.stk[0]}")
             del self.stk[0]
     def list_stack(self):
-        if len(self.stk) == self.size:
-            print("Stack is full")
+        if not self.stk:
+            print("Stack is empty")
         else :
             print("The Stack elements: ", self.stk)
-
-#class Event:
-#    def monday(self):
-#        print("Today is Technical fest")
-#    def tuesday(self):
-#        print("Today is dept fest")
-#    def wednesday(self):
-#        print("Today is Cultural fest")
-#    def friday(self):
-#        print("Today is Ethnic fest")
-#    def other_day(self):
-#        print("Invalid Choice")
 
 class Menu:
     def __init__(self): 
@@ -48,7 +38,7 @@ class Menu:
     def end_of_program(self):
         sys.exit("Exit")
     def invalid_choice(self):
-        print("INvalid choice")
+        print("Invalid choice")
     def run_menu(self):
         stack = Stack()
         while(True):

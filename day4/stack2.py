@@ -18,8 +18,8 @@ class Stack:
         else:
             print(f"Popped element is {self.stk.pop()}")
     def list_stack(self):
-        if len(self.stk) == self.size:
-            print("Stack is full")
+        if not self.stk:
+            print("Stack is empty")
         else :
             print("The Stack elements: ", self.stk[::-1])
 
