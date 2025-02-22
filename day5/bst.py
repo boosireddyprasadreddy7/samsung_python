@@ -31,7 +31,7 @@ class Bst:
         else:
             temp2.right = node
 
-     def delete_node(self):
+    def delete_node(self):
         data = int(input('Enter data of the node to be delete: '))
         temp1 = self.root
         temp2 = None
