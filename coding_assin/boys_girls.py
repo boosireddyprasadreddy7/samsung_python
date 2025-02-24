@@ -4,13 +4,17 @@ Boys and question is in sir's repo and folder is assingnments
 def can_arrange(boys, girls):
     boys.sort()
     girls.sort()
-
-    def valid_arrangement(first, second):
-        for i in range(len(first)):
-            if first[i] > second[i]: 
-                return False
-        return True
-    if valid_arrangement(boys, girls) or valid_arrangement(girls, boys):
+    boys_first = True
+    for i in range(len(boys)):
+        if boys[i] > girls[i]:  
+            boys_first = False
+            break 
+    girls_first = True
+    for i in range(len(girls)):
+        if girls[i] > boys[i]:  
+            girls_first = False
+            break 
+    if boys_first or girls_first:
         return "YES"
     else:
         return "NO"
